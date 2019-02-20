@@ -8,7 +8,7 @@ app.listen(8000, function() {
 	console.log("Server has started...")
 });
 
-// Set to main index page, don't have file yet
+// Router set to main index page
 app.get("/", function(req, res) {
 	res.sendFile(path.join(__dirname + "/index.html"))
 });
