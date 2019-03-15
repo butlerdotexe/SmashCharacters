@@ -34,8 +34,21 @@
 		.button:hover {
 			color: red;
 		}
-
 	</style>
+
+	<script text="text/javascript">
+		function startQuiz() {
+
+		}
+
+		function showAlgorithm() {
+			URL = "http://localhost:8000/algorithm.html"
+			$.ajax({ 
+			url: URL,
+			type: 'GET',
+		});
+		}
+	</script>
 
 </head>
 

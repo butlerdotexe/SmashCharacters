@@ -32,6 +32,9 @@ app.get("/index.html", function(req, res) {
 	res.sendFile(path.join(__dirname + "/index.html"))
 });
 
+app.get("/algorithm.html", function(req, res) {
+	res.sendFile(path.join(__dirname + "/algorithm.html"))
+});
 // Endpoint to get table data from sql database
 /* app.get("/smash", function(req, res) {
 	con.query('SELECT * FROM ', function(err, rows, fields) { // Run the query to get data
