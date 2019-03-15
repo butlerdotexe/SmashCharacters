@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html>
 <center>
+
+
 <head>
 	<title>Smash Quiz</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+
+	<style>
+		body {
+			background-image: url(https://i.imgur.com/GIZ64F7.jpg);
+		}
+
+		h1 {
+			font-size: 96px;
+			color: blue;
+		}
+
+		.button {
+			background-color: blue;
+  			border: none;
+			color: white;
+			padding: 30px 64px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 40px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border: 1px solid black;
+		}
+
+		.button:hover {
+			color: red;
+		}
+
+	</style>
+
 </head>
+
+
+
 <body>
-	<h4>Hello World</h4>
+	<h1>Which Smash Bros Character Are You?</h1>
+	<button type="button" class="button" onclick="startQuiz()">Start Quiz!</button>
+	<button type="button" class="button" onclick="showAlgorithm()">Show Algorithm!</button>
 </body>
 </center>
 </html>

@@ -26,8 +26,9 @@ con.connect(function(err) {
 	}
 });
 
+
 // Router set to main index page
-app.get("/", function(req, res) {
+app.get("/index.html", function(req, res) {
 	res.sendFile(path.join(__dirname + "/index.html"))
 });
 
