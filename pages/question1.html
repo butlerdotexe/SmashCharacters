@@ -1,0 +1,121 @@
+<html>
+	<center>
+		<head>
+			<title>Character Quiz: Question 1</title>
+			<script>
+				function q1(answer) {
+					test = document.getElementById("test");
+					test.innerHTML = answer;
+				}
+			</script>
+			<style>
+				body {
+					background-image: url(https://www.cabinetmakerwarehouse.com/wp-content/uploads/9242-gull-grey.jpg), url(https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_SuperSmashBrosUltimate_02_image1600w.jpg);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: auto, cover;
+				}
+				
+				h1 {
+					padding-top: 64px;
+					font: small-caps bold 64px/1 sans-serif;
+					color: white;
+				}	
+				
+				p {
+					font: small-caps bold 32px/1 sans-serif;
+					color: white;
+				}
+				
+				.button {
+					background-color: rgb(54, 54, 54);
+					color: white;
+					text-align: center;
+					text-decoration: none;
+					display: inline-block;
+					margin: 10px 2px;
+					cursor: pointer;
+					border: 3px solid white;
+					font: small-caps bold 32px/1 sans-serif;
+					width: 256px;
+					height: 64px;
+					border-radius: 10px
+				}
+
+				.button:hover {
+					background-color: white;
+					color: rgb(54, 54, 54)
+				}
+				
+			</style>
+		</head>
+		<body>
+			<h1>Question 1: Playstyle</h1>
+			<p>Choose the playstyle that you would prefer</p>
+			<p>Hover over an option to see a description</p>
+			<p>
+				<button type="button" class="button" title="The generalists. They have no stand-out weaknesses, but they also lack 
+stand-out strengths. Good for beginners or those who like a simple playstyle" onclick="q1('allRounder')">All-Rounder</button>
+
+				<button type="button" class="button" title="These characters look for openings and exploit them, either with
+a ridiculously strong hit or with a difficult to escape combo" onclick="q1('baitPunish')">Bait & Punish</button>
+
+				<button type="button" class="button" title="Characters that change in the middle of the game in some way. 
+There are only 2 of these characters, Shulk and Pokemon Trainer" onclick="q1('dynamic')">Dynamic</button>
+			</p>
+			
+			<p>
+				<button type="button" class="button" title="Characters that rely on strong ground game, typically 
+relying on incredible power over combos"onclick="q1('footsies')">Footsies</button>
+
+				<button type="button" class="button" title="These characters really like grabbing, and can typically do a lot once they get their 
+hands on their opponent. You might have trouble actually getting that far, though" onclick="q1('halfGrappler')">Half-Grappler</button>
+
+				<button type="button" class="button" title="Characters with the speed to get in, get a few hits, and get out before they 
+get in trouble. Can usually keep a safe distance from their opponents" onclick="q1('hitRun')">Hit & Run</button>
+			</p>
+			
+			<p>
+				<button type="button" class="button" title="These characters have a pretty versatile moveset, and work 
+best switching between aggression and baiting opponents" onclick="q1('mixUp')">Mix-Up</button>
+				
+				<button type="button" class="button" title="Characters that like to apply pressure right up close, using 
+fast moves to put their opponent in a bad position"onclick="q1('rushdown')">Rushdown</button>
+				
+				<button type="button" class="button" title="Characters that like to 'trap' their opponents with projectiles, 
+limiting their movement and making it hard to approach" onclick="q1('trapper')">Trapper</button>
+			</p>
+			
+			<p>
+				<button type="button" class="button" title="Very defensive characters with long-range tools, keeping their 
+opponents away from them until it's time to get the kill" onclick="q1('turtle')">Turtle</button>
+				
+				<button type="button" class="button" title="Characters that can play multiple different playstyles that 
+have relatively safe ways to approach their opponent" onclick="q1('zoneBreaker')">Zone Breaker</button>
+				
+				<button type="button" class="button" title="Characters that like to apply pressure from a set distance, keeping 
+control of their opponent's space and limiting their options" onclick="q1('zoner')">Zoner</button>
+			</p>
+			
+			<div id="test"></div>
+		</body>
+	</center>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
