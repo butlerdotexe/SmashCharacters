@@ -45,12 +45,19 @@
 		}
 
 		function showAlgorithm() {
-			URL = "http://localhost:8000/algorithm.html"
+			URL = "http://localhost:8000/algorithm.html";
+
+			$(document).ready(function(){
 			$.ajax({ 
-			url: URL,
-			type: 'GET',
-		});
-		}
+				url: URL,
+				type: 'GET',
+				success: function(data) {  // when client obtains reponse from server
+				error: function() {
+				window.alert("Error. Request to server failed."); // if error occurs
+				}
+			});
+			});
+
 	</script>
 
 </head>
