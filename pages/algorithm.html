@@ -8,14 +8,15 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script>
 		function backPage(){
+			URL = "http://localhost:8000/index";
 			$.ajax({
-				url: "/",
+				url: URL,
 				type: "GET",
-				success: function(){
-					console.log("Yay, it works")
+				success: function(data){
+					window.location.href = data;
 				},
 				error: function(){
-					console.log("Oh no. I doesn't Work.")
+					console.log("Oh no. I doesn't work.")
 				}
 			});
 		}
@@ -65,7 +66,7 @@
 	<p>The following questions will ask for different specifing characteristics, returning it as a list of corresponding numbers. From there, we iterate over each character, tallying every time a character matches a characteristic.At the end of the iteration, we sort each character from largest to smallest number of matches.</p>
 	<p>Your results are based off of the best matches.</p>
 	</div>
-	<button type="button" onclick=backPage()>Return to Quiz</button>
+	<button type="button" onclick="backPage()">Return to Quiz</button>
 	<div>
 </body>
 </center>

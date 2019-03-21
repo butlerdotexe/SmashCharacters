@@ -27,6 +27,10 @@ con.connect(function(err) {
 });
 
 // Router set to main index page
+app.get("/index", function(req, res) {
+	res.send("http://localhost:8000/");
+});
+
 app.get("/", function(req, res) {
 	res.sendFile(path.join(__dirname, "pages/index.html"));
 });
