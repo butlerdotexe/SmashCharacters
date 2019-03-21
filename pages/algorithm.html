@@ -5,12 +5,45 @@
 
 <head>
 	<title>Algorithm</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+
+	<style>
+		#Body {
+			background-color: rgb(54,54,54);
+		}
+		#Text{
+			color:white;
+			font: small-caps bold 32px/1 sans-serif;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 60%;
+		}
+		#Title {
+			background-color: grey;
+		}
+		#Explain {
+			background-color: grey;
+			font: small-caps bold 25px/1 sans-serif;
+		}
+		p {
+			padding: 16px;
+		}
+	</style>
 </head>
 
 
 
-<body>
-	<h1>Hello World</h1>
+<body id="Body">
+	<div id="Text">
+	
+	<h1 id="Title">How it Works</h1>
+	<div id="Explain">
+	<p>We first ask the user for the different playstyles that they are interested in. (All-Rounders, Rushdown, Hit & Run, Etc...)</p>
+	<p>The following questions will ask for different specifing characteristics, returning it as a list of corresponding numbers. From there, we iterate over each character, tallying every time a character matches a characteristic.At the end of the iteration, we sort each character from largest to smallest number of matches.</p>
+	<p>Your results are based off of the best matches.</p>
+	</div>
+	<div>
 </body>
 </center>
 </html>
