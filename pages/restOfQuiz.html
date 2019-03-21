@@ -1,0 +1,253 @@
+<html>
+	<center>
+		<head>
+			<title>Smash Bros Character Quiz</title>
+			<script>
+				function q2(answer) {
+					document.getElementById("veasy").style.background="rgb(54, 54, 54)";
+					document.getElementById("easy").style.background="rgb(54, 54, 54)";
+					document.getElementById("med").style.background="rgb(54, 54, 54)";
+					document.getElementById("hard").style.background="rgb(54, 54, 54)";
+					document.getElementById("vhard").style.background="rgb(54, 54, 54)";
+					
+					document.getElementById(answer).style.background="red";
+
+					test = document.getElementById("test2");
+					test.innerHTML = answer;
+				}
+				
+				function q3(answer) {
+					document.getElementById("close").style.background="rgb(54, 54, 54)";
+					document.getElementById("mid").style.background="rgb(54, 54, 54)";
+					document.getElementById("mix").style.background="rgb(54, 54, 54)";
+					document.getElementById("long").style.background="rgb(54, 54, 54)";
+					
+					document.getElementById(answer).style.background="red";
+					
+					test = document.getElementById("test3");
+					test.innerHTML = answer;
+				}
+				
+				function q4(answer) {
+					document.getElementById("none").style.background="rgb(54, 54, 54)";
+					document.getElementById("one").style.background="rgb(54, 54, 54)";
+					document.getElementById("mult").style.background="rgb(54, 54, 54)";
+					
+					document.getElementById(answer).style.background="red";
+					
+					test = document.getElementById("test4");
+					test.innerHTML = answer;
+				}
+				
+				function q5(answer) {
+					document.getElementById("fast").style.background="rgb(54, 54, 54)";
+					document.getElementById("mod").style.background="rgb(54, 54, 54)";
+					document.getElementById("slow").style.background="rgb(54, 54, 54)";
+					
+					document.getElementById(answer).style.background="red";
+					
+					test = document.getElementById("test5");
+					test.innerHTML = answer;
+				}
+				
+				function q6(answer) {
+					document.getElementById("afast").style.background="rgb(54, 54, 54)";
+					document.getElementById("amod").style.background="rgb(54, 54, 54)";
+					document.getElementById("aslow").style.background="rgb(54, 54, 54)";
+					
+					document.getElementById(answer).style.background="red";
+					
+					test = document.getElementById("test6");
+					test.innerHTML = answer;
+				}
+				
+				function q7(answer) {
+					document.getElementById("vbad").style.background="rgb(54, 54, 54)";
+					document.getElementById("bad").style.background="rgb(54, 54, 54)";
+					document.getElementById("okay").style.background="rgb(54, 54, 54)";
+					document.getElementById("good").style.background="rgb(54, 54, 54)";
+					document.getElementById("vgood").style.background="rgb(54, 54, 54)";
+					
+					document.getElementById(answer).style.background="red";
+					
+					test = document.getElementById("test7");
+					test.innerHTML = answer;
+				}
+				
+				function q8(answer) {
+					document.getElementById("small").style.background="rgb(54, 54, 54)";
+					document.getElementById("smed").style.background="rgb(54, 54, 54)";
+					document.getElementById("large").style.background="rgb(54, 54, 54)";
+					
+					document.getElementById(answer).style.background="red";
+					
+					test = document.getElementById("test8");
+					test.innerHTML = answer;
+				}
+				
+				function q9(answer) {
+					document.getElementById("feather").style.background="rgb(54, 54, 54)";
+					document.getElementById("light").style.background="rgb(54, 54, 54)";
+					document.getElementById("middle").style.background="rgb(54, 54, 54)";
+					document.getElementById("heavy").style.background="rgb(54, 54, 54)";
+					document.getElementById("vheavy").style.background="rgb(54, 54, 54)";
+					
+					document.getElementById(answer).style.background="red";
+
+					test = document.getElementById("test9");
+					test.innerHTML = answer;
+				}
+				
+				function q10(answer) {
+					document.getElementById("always").style.background="rgb(54, 54, 54)";
+					document.getElementById("some").style.background="rgb(54, 54, 54)";
+					document.getElementById("never").style.background="rgb(54, 54, 54)";
+					
+					document.getElementById(answer).style.background="red";
+					
+					test = document.getElementById("test10");
+					test.innerHTML = answer;
+				}
+				
+				function q11(answer) {
+					document.getElementById("no").style.background="rgb(54, 54, 54)";
+					document.getElementById("not").style.background="rgb(54, 54, 54)";
+					document.getElementById("reliant").style.background="rgb(54, 54, 54)";
+					document.getElementById("lol").style.background="rgb(54, 54, 54)";
+					
+					document.getElementById(answer).style.background="red";
+					
+					test = document.getElementById("test11");
+					test.innerHTML = answer;
+				}
+
+			</script>
+			<style>
+				body {
+					background-image: url(https://www.cabinetmakerwarehouse.com/wp-content/uploads/9242-gull-grey.jpg), url(https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_SuperSmashBrosUltimate_02_image1600w.jpg);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: auto, cover;
+					background-attachment: fixed, fixed;
+				}
+				
+				h1 {
+					padding-top: 64px;
+					font: small-caps bold 48px/1 sans-serif;
+					color: white;
+				}	
+				
+				p {
+					font: small-caps bold 32px/1 sans-serif;
+					color: white;
+				}
+				
+				.button {
+					background-color: rgb(54, 54, 54);
+					color: white;
+					text-align: center;
+					text-decoration: none;
+					display: inline-block;
+					margin: 10px 2px;
+					cursor: pointer;
+					border: 3px solid white;
+					font: small-caps bold 32px/1 sans-serif;
+					width: 256px;
+					height: 64px;
+					border-radius: 10px;
+					-webkit-transition-duration: 0.4s;
+					transition-duration: 0.4s;
+				}
+				
+				.button:hover {
+					background: white;
+					color: rgb(54, 54, 54)
+				}
+	
+			</style>
+		</head>
+		<body>
+			<h1>Question 2: Difficulty</h1>
+			<p>Do you want to be able to pick up a character’s moves within a </p><p> few hours,or develop them over a longer period of time?</p>
+			<p><button type="button" class="button" title="" id='veasy' onclick="q2('veasy')">Very Easy</button> 
+			<button type="button" class="button" title="" id='easy' onclick="q2('easy')">Easy</button>
+			<button type="button" class="button" title="" id='med' onclick="q2('med')">Medium</button></p>
+			<p><button type="button" class="button" title="" id='hard' onclick="q2('hard')">Hard</button> 
+			<button type="button" class="button" title="" id='vhard' onclick="q2('vhard')">Very Hard</button></p>
+			<div id="test2"></div>
+			
+			<h1>Question 3: Range</h1>
+			<p>What is your preferred fighting range?</p>
+			<p><button type="button" class="button" title="" id='close' onclick="q3('close')">Up Close</button> 
+			<button type="button" class="button" title="" id='mid' onclick="q3('mid')">Mid-range</button></p>
+			<p><button type="button" class="button" title="" id='mix' onclick="q3('mix')">Mixed</button> 
+			<button type="button" class="button" title="" id='long' onclick="q3('long')">Long</button></p>
+			<div id="test3"></div>
+			
+			<h1>Question 4: Projectiles</h1>
+			<p> How many projectiles do you want to be able to use?</p>
+			<p><button type="button" class="button" title="" id='none' onclick="q4('none')">None</button> 
+			<button type="button" class="button" title="" id='one' onclick="q4('one')">Just One</button>
+			<button type="button" class="button" title="" id='mult' onclick="q4('mult')">Multiple</button></p>
+			<div id="test4"></div>
+			
+			<h1>Question 5: Ground Speed</h1>
+			<p> How fast do you want to be able to run?</p>
+			<p><button type="button" class="button" title="" id='fast' onclick="q5('fast')">Incredibly</button> 
+			<button type="button" class="button" title="" id='mod' onclick="q5('mod')">Moderately</button>
+			<button type="button" class="button" title="" id='slow' onclick="q5('slow')">Slow</button></p>
+			<div id="test5"></div>
+			
+			<h1>Question 6: Air Speed</h1>
+			<p>How fast do you want to be able to move in the air?</p>
+			<p><button type="button" class="button" title="" id='afast' onclick="q6('afast')">Incredibly</button> 
+			<button type="button" class="button" title="" id='amod' onclick="q6('amod')">Moderately</button>
+			<button type="button" class="button" title="" id='aslow' onclick="q6('aslow')">Slow</button></p>
+			<div id="test6"></div>
+			
+			<h1>Question 7: Recovery</h1>
+			<p>How important is having good recovery?</p>
+			<p><button type="button" class="button" title="" id='vbad' onclick="q7('vbad')">Not at all</button> 
+			<button type="button" class="button" title="" id='bad' onclick="q7('bad')">Fairly</button> 
+			<button type="button" class="button" title="" id='okay' onclick="q7('okay')">Pretty</button></p>
+			<p><button type="button" class="button" title="" id='good' onclick="q7('good')">Very</button> 
+			<button type="button" class="button" title="" id='vgood' onclick="q7('vgood')">Extremely</button></p>
+			<div id="test7"></div>
+			
+			<h1>Question 8: Size</h1>
+			<p>What size character are you looking for?</p>
+			<p><button type="button" class="button" title="" id='small' onclick="q8('small')">Small</button> 
+			<button type="button" class="button" title="" id='smed' onclick="q8('smed')">Medium</button>
+			<button type="button" class="button" title="" id='large' onclick="q8('large')">Large</button></p>
+			<div id="test8"></div>
+			
+			<h1>Question 9: Weight</h1>
+			<p>How heavy do you want to be?</p>
+			<p><button type="button" class="button" title="" id='feather' onclick="q9('feather')">Like a Feather</button> 
+			<button type="button" class="button" title="" id='light' onclick="q9('light')">Light</button>
+			<button type="button" class="button" title="" id='middle' onclick="q9('middle')">Middle</button></p>
+			<p><button type="button" class="button" title="" id='heavy' onclick="q9('heavy')">Heavy</button> 
+			<button type="button" class="button" title="" id='vheavy' onclick="q9('vheavy')">Super Heavy</button></p>
+			<div id="test9"></div>
+			
+			<h1>Question 10: Combos</h1>
+			<p>How much do you want to be comboing people?</p>
+			<p><button type="button" class="button" title="" id='always' onclick="q10('always')">Always</button> 
+			<button type="button" class="button" title="" id='some' onclick="q10('some')">Sometimes</button>
+			<button type="button" class="button" title="" id='never' onclick="q10('never')">Barely Ever</button></p>
+			<div id="test10"></div>
+			
+			<h1>Question 11: Gimmicks</h1>
+			<p>Do you like gimmicky characters?</p>
+			<p><button type="button" class="button" title="" id='no' onclick="q11('no')">I Don't Care</button> 
+			<button type="button" class="button" title="" id='not' onclick="q11('not')">They're Alright</button></p>
+			<p><button type="button" class="button" title="" id='reliant' onclick="q11('reliant')">I Love Them</button> 
+			<button type="button" class="button" title="" id='lol' onclick="q11('lol')">I Live for Them</button></p>
+			<div id="test11"></div>
+			
+			<p><button type="button" class="button" title="" onclick="submit()">Sumbit</button></p>
+			<div id="test"></div>
+
+		</body>
+	</center>
+</html>
