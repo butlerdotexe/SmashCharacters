@@ -13,7 +13,7 @@ var con = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
 	password: 'password',
-	database: 'databaseName' //Enter database name here
+	database: 'smash_tags' //Enter database name here
 });
 
 // Connecting to mysql database and error checking
@@ -26,22 +26,26 @@ con.connect(function(err) {
 	}
 });
 
-
 // Router set to main index page
-app.get("/index.html", function(req, res) {
-	res.sendFile(path.join(__dirname + "/index.html"))
+app.get("/", function(req, res) {
+	res.sendFile(path.join(__dirname, "pages/index.html"))
 });
 
-app.get("/algorithm.html", function(req, res) {
-	res.sendFile(path.join(__dirname + "/algorithm.html"))
+app.get("/algorithm", function(req, res) {
+	res.sendFile(path.join(__dirname, "pages/algorithm.html"))
 });
+
+app.get("/question1", function(req, res) {
+	res.sendFile(path.join(__dirname, "pages/question1.html"))
+});
+
 // Endpoint to get table data from sql database
-/* app.get("/smash", function(req, res) {
-	con.query('SELECT * FROM ', function(err, rows, fields) { // Run the query to get data
+app.get("/smash", function(req, res) {
+	con.query('SELECT * FROM fullroster', function(err, rows, fields) { // Run the query to get data
 		if (err) {
 			console.log('Error during query processing.');
 		} else { // Success case
 			res.send(rows); // Send back the data from query
 		}
 	});
-}); */
+});
