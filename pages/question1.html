@@ -2,10 +2,31 @@
 	<center>
 		<head>
 			<title>Smash Bros Character Quiz</title>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 			<script>
 				function q1(answer) {
 					test = document.getElementById("test");
 					test.innerHTML = answer;
+					
+					var json = '{"question":"' + answer.toString() + '"}';
+					obj = JSON.parse(json);
+					
+					test.innerHTML = json;
+
+					
+					$.ajax({ 
+						type: "GET",
+						url: "https://localhost8000",
+						data: obj,
+						dataType: "json",
+						success: function(msg) {
+							console.log("request sent");
+						},
+						error:  function() { 
+							console.log("failure");
+						}
+					});
+					
 				}
 			</script>
 			<style>
