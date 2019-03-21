@@ -26,6 +26,20 @@
 							console.log("failure");
 						}
 					});
+
+					var URL = "http://localhost:8000/restOfQuiz"
+
+					// Send to next page
+					$.ajax({ 
+						type: "GET",
+						url: URL,
+						success: function(data) {
+							window.location.href = data;
+						},
+						error:  function() { 
+							console.log("failure");
+						}
+					});
 					
 				}
 			</script>
