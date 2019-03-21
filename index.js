@@ -35,6 +35,7 @@ app.get("/", function(req, res) {
 	res.sendFile(path.join(__dirname, "pages/index.html"));
 });
 
+//Link for index to algorithm page
 app.get("/algorithm", function(req, res) {
 	res.send("http://localhost:8000/algorithm.html");
 });
@@ -43,6 +44,8 @@ app.get("/algorithm.html", function(req, res) {
 	res.sendFile(path.join(__dirname, "pages/algorithm.html"))
 });
 
+
+// Link for index to beginning of quiz
 app.get("/question1", function(req, res) {
 	res.send("http://localhost:8000/question1.html");
 });
@@ -51,6 +54,8 @@ app.get("/question1.html", function(req, res) {
 	res.sendFile(path.join(__dirname, "pages/question1.html"));
 });
 
+
+// Link for question 1 to rest of quiz
 app.get("/restOfQuiz", function(req, res) {
 	res.send("http://localhost:8000/restOfQuiz.html");
 });
@@ -59,6 +64,7 @@ app.get("/restOfQuiz.html", function(req, res) {
 	res.sendFile(path.join(__dirname, "pages/restOfQuiz.html"));
 });
 
+// Link for rest of quiz to results
 app.get("/results", function(req, res) {
 	res.send("http://localhost:8000/resultsPage.html");
 });
