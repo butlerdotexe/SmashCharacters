@@ -149,7 +149,7 @@
 					var length = answers.length;
 					for (var i = 0; i < length; i++) {
 						if (answers[i] == null) {
-							alert("Please answer all questions")
+							alert("Please answer all questions.")
 							return false
 						}
 						//console.log(answers[i]);
@@ -173,7 +173,20 @@
 							console.log("request sent");
 						},
 						error:  function() { 
-							console.log("failure");
+							console.log("Failure");
+						}
+					});
+
+					var URL = "http://localhost:8000/results";
+
+					$.ajax({ 
+						type: "GET",
+						url: URL,
+						success: function(data) {
+							window.location.href = data;
+						},
+						error:  function() { 
+							console.log("Failure");
 						}
 					});
 					

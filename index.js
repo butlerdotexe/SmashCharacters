@@ -59,6 +59,19 @@ app.get("/restOfQuiz.html", function(req, res) {
 	res.sendFile(path.join(__dirname, "pages/restOfQuiz.html"));
 });
 
+app.get("/results", function(req, res) {
+	res.send("http://localhost:8000/resultsPage.html");
+});
+
+app.get("/resultsPage.html", function(req, res) {
+	res.sendFile(path.join(__dirname, "pages/resultsPage.html"));
+});
+
+// Still need to work on this
+app.get("/answers", function(req, res) {
+	console.log(req.query);
+});
+
 // Endpoint to get table data from sql database
 app.get("/smash", function(req, res) {
 	con.query('SELECT * FROM fullroster', function(err, rows, fields) { // Run the query to get data
