@@ -5,7 +5,21 @@
 
 <head>
 	<title>Algorithm</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+		function backPage(){
+			$.ajax({
+				url: "/",
+				type: "GET",
+				success: function(){
+					console.log("Yay, it works")
+				},
+				error: function(){
+					console.log("Oh no. I doesn't Work.")
+				}
+			});
+		}
+	</script>
 
 	<style>
 		#Body {
@@ -29,6 +43,14 @@
 		p {
 			padding: 16px;
 		}
+		button {
+			background-color: grey;
+			border: none;
+			color: white;
+			font: small-caps bold 25px/1 sans-serif;
+			padding: 15px 32px
+			
+		}
 	</style>
 </head>
 
@@ -43,6 +65,7 @@
 	<p>The following questions will ask for different specifing characteristics, returning it as a list of corresponding numbers. From there, we iterate over each character, tallying every time a character matches a characteristic.At the end of the iteration, we sort each character from largest to smallest number of matches.</p>
 	<p>Your results are based off of the best matches.</p>
 	</div>
+	<button type="button" onclick=backPage()>Return to Quiz</button>
 	<div>
 </body>
 </center>
