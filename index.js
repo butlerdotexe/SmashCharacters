@@ -28,15 +28,23 @@ con.connect(function(err) {
 
 // Router set to main index page
 app.get("/", function(req, res) {
-	res.sendFile(path.join(__dirname, "pages/index.html"))
+	res.sendFile(path.join(__dirname, "pages/index.html"));
 });
 
 app.get("/algorithm", function(req, res) {
+	res.send("http://localhost:8000/algorithm.html");
+});
+
+app.get("/algorithm.html", function(req, res) {
 	res.sendFile(path.join(__dirname, "pages/algorithm.html"))
 });
 
 app.get("/question1", function(req, res) {
-	res.sendFile(path.join(__dirname, "pages/question1.html"))
+	res.send("http://localhost:8000/question1.html");
+});
+
+app.get("/question1.html", function(req, res) {
+	res.sendFile(path.join(__dirname, "pages/question1.html"));
 });
 
 // Endpoint to get table data from sql database

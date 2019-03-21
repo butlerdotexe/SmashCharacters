@@ -41,22 +41,39 @@
 
 	<script text="text/javascript">
 		function startQuiz() {
-
-		}
-
-		function showAlgorithm() {
-			URL = "http://localhost:8000/algorithm.html";
+			URL = "http://localhost:8000/question1";
 
 			$(document).ready(function(){
 			$.ajax({ 
 				url: URL,
 				type: 'GET',
-				success: function(data) {  // when client obtains reponse from server
-				error: function() {
-				window.alert("Error. Request to server failed."); // if error occurs
+				success: function(data) {
+				window.location.href = data;
+				},  // when client obtains reponse from server
+				error: function (xhr, ajaxOptions, throwError) { // Error handling
+					alert("There was an error fetching " + URL);
 				}
 			});
 			});
+		}
+		
+
+		function showAlgorithm() {
+			URL = "http://localhost:8000/algorithm";
+
+			$(document).ready(function(){
+			$.ajax({ 
+				url: URL,
+				type: 'GET',
+				success: function(data) {
+				window.location.href = data;
+				},  // when client obtains reponse from server
+				error: function (xhr, ajaxOptions, throwError) { // Error handling
+					alert("There was an error fetching " + URL);
+				}
+			});
+			});
+		}
 
 	</script>
 
@@ -67,9 +84,7 @@
 <body>
 	<h1>Which Smash Bros Character Are You?</h1>
 	
-	<a href="question1.html">
 		<button type="button" class="button" onclick="startQuiz()">Start Quiz!</button>
-	</a>
 	
 		<button type="button" class="button" onclick="showAlgorithm()"> Show Algorithm!</button>
 </body>
