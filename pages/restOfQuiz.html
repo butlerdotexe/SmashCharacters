@@ -2,7 +2,11 @@
 	<center>
 		<head>
 			<title>Smash Bros Character Quiz</title>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 			<script>
+				
+				answers = [null,null,null,null,null,null,null,null,null,null];
+			
 				function q2(answer) {
 					document.getElementById("veasy").style.background="rgb(54, 54, 54)";
 					document.getElementById("easy").style.background="rgb(54, 54, 54)";
@@ -13,7 +17,9 @@
 					document.getElementById(answer).style.background="red";
 
 					test = document.getElementById("test2");
-					test.innerHTML = answer;
+					//test.innerHTML = answer;
+					
+					answers[0] = answer;
 				}
 				
 				function q3(answer) {
@@ -25,7 +31,9 @@
 					document.getElementById(answer).style.background="red";
 					
 					test = document.getElementById("test3");
-					test.innerHTML = answer;
+					//test.innerHTML = answer;
+					
+					answers[1] = answer;
 				}
 				
 				function q4(answer) {
@@ -36,7 +44,9 @@
 					document.getElementById(answer).style.background="red";
 					
 					test = document.getElementById("test4");
-					test.innerHTML = answer;
+					//test.innerHTML = answer;
+					
+					answers[2] = answer;
 				}
 				
 				function q5(answer) {
@@ -47,7 +57,9 @@
 					document.getElementById(answer).style.background="red";
 					
 					test = document.getElementById("test5");
-					test.innerHTML = answer;
+					//test.innerHTML = answer;
+					
+					answers[3] = answer;
 				}
 				
 				function q6(answer) {
@@ -58,7 +70,9 @@
 					document.getElementById(answer).style.background="red";
 					
 					test = document.getElementById("test6");
-					test.innerHTML = answer;
+					//test.innerHTML = answer;
+					
+					answers[4] = answer;
 				}
 				
 				function q7(answer) {
@@ -71,7 +85,9 @@
 					document.getElementById(answer).style.background="red";
 					
 					test = document.getElementById("test7");
-					test.innerHTML = answer;
+					//test.innerHTML = answer;
+					
+					answers[5] = answer;
 				}
 				
 				function q8(answer) {
@@ -82,7 +98,9 @@
 					document.getElementById(answer).style.background="red";
 					
 					test = document.getElementById("test8");
-					test.innerHTML = answer;
+					//test.innerHTML = answer;
+					
+					answers[6] = answer;
 				}
 				
 				function q9(answer) {
@@ -95,7 +113,9 @@
 					document.getElementById(answer).style.background="red";
 
 					test = document.getElementById("test9");
-					test.innerHTML = answer;
+					//test.innerHTML = answer;
+					
+					answers[7] = answer;
 				}
 				
 				function q10(answer) {
@@ -106,7 +126,9 @@
 					document.getElementById(answer).style.background="red";
 					
 					test = document.getElementById("test10");
-					test.innerHTML = answer;
+					//test.innerHTML = answer;
+					
+					answers[8] = answer;
 				}
 				
 				function q11(answer) {
@@ -118,8 +140,46 @@
 					document.getElementById(answer).style.background="red";
 					
 					test = document.getElementById("test11");
-					test.innerHTML = answer;
+					//test.innerHTML = answer;
+					
+					answers[9] = answer;
 				}
+				
+				function submit() {
+					var length = answers.length;
+					for (var i = 0; i < length; i++) {
+						if (answers[i] == null) {
+							alert("Please answer all questions")
+							return false
+						}
+						//console.log(answers[i]);
+					}
+					
+					console.log(answers);
+					
+					
+					var json = '{"2":"' + answers[0].toString() + '","3":"' + answers[1].toString() + '","4":"' + answers[2].toString() + '","5":"' + answers[3].toString() + '","6":"' + answers[4].toString() + '","7":"' + answers[5].toString() + '","8":"' + answers[6].toString() + '","9":"' + answers[7].toString() + '","10":"' + answers[8].toString() + '","11":"' + answers[9].toString() +'"}';
+					obj = JSON.parse(json);
+					
+					console.log(json)
+
+					
+					$.ajax({ 
+						type: "GET",
+						url: "/answers",
+						data: obj,
+						dataType: "json",
+						success: function(msg) {
+							console.log("request sent");
+						},
+						error:  function() { 
+							console.log("failure");
+						}
+					});
+					
+					
+				}
+				
 
 			</script>
 			<style>
