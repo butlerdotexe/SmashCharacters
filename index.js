@@ -79,14 +79,15 @@ app.get("/answers", function(req, res) {
 });
 
 // Endpoint to get table data from sql database
+var characters;
+
 app.get("/smash", function(req, res) {
 	con.query('SELECT * FROM fullroster WHERE playstyle = "' + req.query.question + '"', function(err, rows, fields) { // Run the query to get data
 		if (err) {
 			console.log('Error during query processing.');
 			console.log(err);
 		} else { // Success case
-			console.log(rows);
-			res.send(rows); // Send back the data from query
+			characters = rows;
 		}
 	});
 });
