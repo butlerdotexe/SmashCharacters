@@ -9,7 +9,7 @@ Techonologies Used:
 -HTML
 -CSS
 -JavaScript
--MySQL
+-MySQL/SQL
 -jQuery
 
 How To Run: Run index.js on either node or nodemon. Go to localhost:8000 to access the local server. 
@@ -22,4 +22,10 @@ Developers:
 
 ![Index](/images/index.png)
 
-![Index](https://user-images.githubusercontent.com/22400966/54849598-22537180-4cbb-11e9-845a-663e817031b3.png)
+![First Question](/images/question1.png)
+
+![Questions](/images/allquestions.png)
+
+![Results1](/images/results1.png)
+
+![Results2](/images/results2.png)
