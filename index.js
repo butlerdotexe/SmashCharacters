@@ -11,9 +11,9 @@ app.listen(8000, function() {
 // Connecting to sql database with help of the mysql library 
 var con = mysql.createConnection({
 	host: 'localhost',
-	user: 'Carter',
-	password: '2040Carter',
-	database: 'smashtags' //Enter database name here
+	user: 'root',
+	password: 'password',
+	database: 'smash_tags' //Enter database name here
 });
 
 // Connecting to mysql database and error checking
