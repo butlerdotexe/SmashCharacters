@@ -20,4 +20,4 @@ Developers:
 - Blake Parker (Project Manager)
 - Carter Knight (Database)
 
-![Index](SmashCharacters/images/index)
+<img width="1280" alt="index" src="https://user-images.githubusercontent.com/22400966/54849598-22537180-4cbb-11e9-845a-663e817031b3.png">
