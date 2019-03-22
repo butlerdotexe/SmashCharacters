@@ -4,6 +4,15 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
 
 	<style>
+		div {
+			border: 2px solid black;
+			margin-left: 5%;
+			margin-top: 5%;
+			margin-right: 5%;
+			height: 500px;
+			background-color: gray;
+		}
+
 		.button {
 			background-color: blue;
   			border: none;
@@ -28,9 +37,10 @@
 		$.ajax({ 
 			type: "GET",
 			url: "/finalResults",
-			success: function(msg) {
+			dataType: "html"
+			success: function(data) {
 				console.log("Request Sent.");
-				$('#empty').append(msg);
+				$('#empty').append(data);
 			},
 			error:  function() { 
 				console.log("Failure.");
@@ -54,13 +64,8 @@
 
 </head>
 
-<body>
-	<div id="empty">
-	</div>
-
-	<div>
+<body id="empty">
 		<button type="button" class="button" onclick="backHome()">Back to Start</button>
-	</div>
 </body>
 
 </html>
