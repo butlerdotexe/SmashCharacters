@@ -12,7 +12,7 @@ app.listen(8000, function() {
 var con = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
-	password: 'password',
+	password: 'Archmere8*0',
 	database: 'smash_tags' //Enter database name here
 });
 
