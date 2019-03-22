@@ -9,12 +9,12 @@
 			
 				function q1(answer) {
 					test = document.getElementById("test");
-					test.innerHTML = answer;
+					//test.innerHTML = answer;
 					document.getElementById(answer).style.background="red";
 					json += '"' + answer.toString() + '",';
 					
 					
-					test.innerHTML = json;
+					//test.innerHTML = json;
 					
 				}
 				
@@ -22,7 +22,7 @@
 				
 				var newStr = json.substring(0, json.length-1);
 				newStr += ']}';
-				test.innerHTML = newStr;
+				//test.innerHTML = newStr;
 				obj = JSON.parse(newStr);
 				
 				$.ajax({ 
