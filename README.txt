@@ -20,4 +20,4 @@ Developers:
 - Blake Parker (Project Manager)
 - Carter Knight (Database)
 
-![Main](images/index.png "Index Page")
+![image](images/index.png
