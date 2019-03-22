@@ -41,7 +41,7 @@ app.get("/algorithm", function(req, res) {
 });
 
 app.get("/algorithm.html", function(req, res) {
-	res.sendFile(path.join(__dirname, "pages/algorithm.html"))
+	res.sendFile(path.join(__dirname, "pages/algorithm.html"));
 });
 
 
@@ -80,10 +80,12 @@ app.get("/answers", function(req, res) {
 
 // Endpoint to get table data from sql database
 app.get("/smash", function(req, res) {
-	con.query('SELECT * FROM fullroster', function(err, rows, fields) { // Run the query to get data
+	con.query('SELECT * FROM fullroster WHERE playstyle = "' + req.query.question + '"', function(err, rows, fields) { // Run the query to get data
 		if (err) {
 			console.log('Error during query processing.');
+			console.log(err);
 		} else { // Success case
+			console.log(rows);
 			res.send(rows); // Send back the data from query
 		}
 	});
