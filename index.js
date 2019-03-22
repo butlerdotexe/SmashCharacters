@@ -91,3 +91,14 @@ app.get("/smash", function(req, res) {
 		}
 	});
 });
+
+app.get("/answers", function(req, res) {
+	con.query('SELECT * FROM fullroster', function(err, rows, fields) { // Run the query to get data
+		if (err) {
+			console.log('Error during query processing.');
+			console.log(err);
+		} else { // Success case
+			
+		}
+	});
+});
