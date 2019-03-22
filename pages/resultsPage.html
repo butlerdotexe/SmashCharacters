@@ -1,0 +1,407 @@
+<html>
+	<center>
+		<head>
+			<title>Smash Bros Character Quiz</title>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+			<script>
+				function getResult(){
+					var char1 = "link"
+					var char2 = "falco"
+					var char3 = "younglink"
+					
+					var img1 = ""
+					var img2 = ""
+					var img3 = ""
+					
+					if (char1 == "bayonetta") {img1 = "https://www.ssbwiki.com/images/2/27/BayonettaHeadSSBUWebsite.png";}
+					else if (char1 == "bowser") {img1 = "https://www.ssbwiki.com/images/0/0b/BowserHeadSSBUWebsite.png";}
+					else if (char1 == "bowserjr") {img1 = "https://www.ssbwiki.com/images/3/3e/BowserJrHeadSSBUWebsite.png";}
+					else if (char1 == "captainfalcon") {img1 = "https://www.ssbwiki.com/images/6/6b/CaptainFalconHeadSSBUWebsite.png";}
+					else if (char1 == "cloud") {img1 = "https://www.ssbwiki.com/images/c/cb/CloudHeadSSBUWebsite.png";}
+					else if (char1 == "corrin") {img1 = "https://www.ssbwiki.com/images/6/6a/CorrinHeadSSBUWebsite.png";}
+					else if (char1 == "diddykong") {img1 = "https://www.ssbwiki.com/images/5/5d/DiddyKongHeadSSBUWebsite.png";}
+					else if (char1 == "donkeykong") {img1 = "https://www.ssbwiki.com/images/2/21/DonkeyKongHeadSSBUWebsite.png";}
+					else if (char1 == "drmario") {img1 = "https://www.ssbwiki.com/images/c/c8/DrMarioHeadSSBUWebsite.png";}
+					else if (char1 == "duckhunt") {img1 = "https://www.ssbwiki.com/images/3/38/DuckHuntHeadSSBUWebsite.png";}
+					else if (char1 == "falco") {img1 = "https://www.ssbwiki.com/images/6/6e/FalcoHeadSSBUWebsite.png";}
+					else if (char1 == "fox") {img1 = "https://www.ssbwiki.com/images/c/c9/FoxHeadSSBUWebsite.png";}
+					else if (char1 == "ganondorf") {img1 = "https://www.ssbwiki.com/images/b/b6/GanondorfHeadSSBUWebsite.png";}
+					else if (char1 == "greninja") {img1 = "https://www.ssbwiki.com/images/7/79/GreninjaHeadSSBUWebsite.png";}
+					else if (char1 == "iceclimbers") {img1 = "https://www.ssbwiki.com/images/0/0c/IceClimbersHeadSSBUWebsite.png";}
+					else if (char1 == "ike") {img1 = "https://www.ssbwiki.com/images/2/25/IkeHeadSSBUWebsite.png";}
+					else if (char1 == "incineroar") {img1 = "https://www.ssbwiki.com/images/e/e3/IncineroarHeadSSBUWebsite.png";}
+					else if (char1 == "inkling") {img1 = "https://www.ssbwiki.com/images/0/04/InklingHeadSSBUWebsite.png";}
+					else if (char1 == "isabelle") {img1 = "https://www.ssbwiki.com/images/2/2e/IsabelleHeadSSBUWebsite.png";}
+					else if (char1 == "jigglypuff") {img1 = "https://www.ssbwiki.com/images/9/90/JigglypuffHeadSSBUWebsite.png";}
+					else if (char1 == "kingdedede") {img1 = "https://www.ssbwiki.com/images/f/fe/KingDededeHeadSSBUWebsite.png";}
+					else if (char1 == "kingkrool") {img1 = "https://www.ssbwiki.com/images/3/35/KingKRoolHeadSSBUWebsite.png";}
+					else if (char1 == "kirby") {img1 = "https://www.ssbwiki.com/images/1/15/KirbyHeadSSBUWebsite.png";}
+					else if (char1 == "link") {img1 = "https://www.ssbwiki.com/images/2/2b/LinkHeadSSBUWebsite.png";}
+					else if (char1 == "littlemac") {img1 = "https://www.ssbwiki.com/images/8/87/LittleMacHeadSSBUWebsite.png";}
+					else if (char1 == "lucario") {img1 = "https://www.ssbwiki.com/images/2/20/LucarioHeadSSBUWebsite.png";}
+					else if (char1 == "lucas") {img1 = "https://www.ssbwiki.com/images/3/31/LucasHeadSSBUWebsite.png";}
+					else if (char1 == "luigi") {img1 = "https://www.ssbwiki.com/images/9/9d/LuigiHeadSSBUWebsite.png";}
+					else if (char1 == "mario") {img1 = "https://www.ssbwiki.com/images/9/9e/MarioHeadSSBUWebsite.png";}
+					else if (char1 == "marth") {img1 = "https://www.ssbwiki.com/images/a/ae/MarthHeadSSBUWebsite.png";}
+					else if (char1 == "megaman") {img1 = "https://www.ssbwiki.com/images/2/26/MegaManHeadSSBUWebsite.png";}
+					else if (char1 == "metaknight") {img1 = "https://www.ssbwiki.com/images/3/3d/MetaKnightHeadSSBUWebsite.png";}
+					else if (char1 == "mewtwo") {img1 = "https://www.ssbwiki.com/images/7/7e/MewtwoHeadSSBUWebsite.png";}
+					else if (char1 == "miibrawler") {img1 = "https://www.ssbwiki.com/images/d/d8/MiiBrawlerHeadSSBU.png";}
+					else if (char1 == "miigunner") {img1 = "https://www.ssbwiki.com/images/3/3d/MiiGunnerHeadSSBU.png";}
+					else if (char1 == "miiswordfighter") {img1 = "https://www.ssbwiki.com/images/e/ef/MiiSwordfighterHeadSSBU.png";}
+					else if (char1 == "mrgameandwatch") {img1 = "https://www.ssbwiki.com/images/1/15/MrGame%26WatchHeadSSBUWebsite.png";}
+					else if (char1 == "ness") {img1 = "https://www.ssbwiki.com/images/d/d5/NessHeadSSBUWebsite.png";}
+					else if (char1 == "olimar") {img1 = "https://www.ssbwiki.com/images/9/97/OlimarHeadSSBUWebsite.png";}
+					else if (char1 == "pacman") {img1 = "https://www.ssbwiki.com/images/3/3d/Pac-ManHeadSSBUWebsite.png";}
+					else if (char1 == "palutena") {img1 = "https://www.ssbwiki.com/images/d/d7/PalutenaHeadSSBUWebsite.png";}
+					else if (char1 == "peach") {img1 = "https://www.ssbwiki.com/images/1/14/PeachHeadSSBUWebsite.png";}
+					else if (char1 == "pichu") {img1 = "https://www.ssbwiki.com/images/5/50/PichuHeadSSBUWebsite.png";}
+					else if (char1 == "pikachu") {img1 = "https://www.ssbwiki.com/images/5/52/PikachuHeadSSBUWebsite.png";}
+					else if (char1 == "piranhaplant") {img1 = "https://www.ssbwiki.com/images/c/cf/PiranhaPlantHeadSSBUWebsite.png";}
+					else if (char1 == "pit") {img1 = "https://www.ssbwiki.com/images/d/d7/PitHeadSSBUWebsite.png";}
+					else if (char1 == "pokemontrainer") {img1 = "https://www.ssbwiki.com/images/2/2c/Pok%C3%A9monTrainerHeadSSBUWebsite.png";}
+					else if (char1 == "ridley") {img1 = "https://www.ssbwiki.com/images/7/7c/RidleyHeadSSBUWebsite.png";}
+					else if (char1 == "rob") {img1 = "https://www.ssbwiki.com/images/b/be/ROBHeadSSBUWebsite.png";}
+					else if (char1 == "robin") {img1 = "https://www.ssbwiki.com/images/4/43/RobinHeadSSBUWebsite.png";}
+					else if (char1 == "rosalina") {img1 = "https://www.ssbwiki.com/images/6/63/RosalinaHeadSSBUWebsite.png";}
+					else if (char1 == "roy") {img1 = "https://www.ssbwiki.com/images/2/22/RoyHeadSSBUWebsite.png";}
+					else if (char1 == "ryu") {img1 = "https://www.ssbwiki.com/images/2/20/RyuHeadSSBUWebsite.png";}
+					else if (char1 == "samus") {img1 = "https://www.ssbwiki.com/images/d/d0/SamusHeadSSBUWebsite.png";}
+					else if (char1 == "sheik") {img1 = "https://www.ssbwiki.com/images/1/1e/SheikHeadSSBUWebsite.png";}
+					else if (char1 == "shulk") {img1 = "https://www.ssbwiki.com/images/b/bf/ShulkHeadSSBUWebsite.png";}
+					else if (char1 == "simon") {img1 = "https://www.ssbwiki.com/images/5/52/SimonHeadSSBUWebsite.png";}
+					else if (char1 == "snake") {img1 = "https://www.ssbwiki.com/images/9/9f/SnakeHeadSSBUWebsite.png";}
+					else if (char1 == "sonic") {img1 = "https://www.ssbwiki.com/images/b/b7/SonicHeadSSBUWebsite.png";}
+					else if (char1 == "toonlink") {img1 = "https://www.ssbwiki.com/images/b/bf/ToonLinkHeadSSBUWebsite.png";}
+					else if (char1 == "villager") {img1 = "https://www.ssbwiki.com/images/f/f9/VillagerHeadSSBUWebsite.png";}
+					else if (char1 == "wario") {img1 = "https://www.ssbwiki.com/images/7/7f/WarioHeadSSBUWebsite.png";}
+					else if (char1 == "wiifittrainer") {img1 = "https://www.ssbwiki.com/images/f/fc/WiiFitTrainerHeadSSBUWebsite.png";}
+					else if (char1 == "wolf") {img1 = "https://www.ssbwiki.com/images/0/06/WolfHeadSSBUWebsite.png";}
+					else if (char1 == "yoshi") {img1 = "https://www.ssbwiki.com/images/9/93/YoshiHeadSSBUWebsite.png";}
+					else if (char1 == "younglink") {img1 = "https://www.ssbwiki.com/images/c/c0/YoungLinkHeadSSBUWebsite.png";}
+					else if (char1 == "zelda") {img1 = "https://www.ssbwiki.com/images/c/c8/ZeldaHeadSSBUWebsite.png";}
+					else if (char1 == "zerosuit") {img1 = "https://www.ssbwiki.com/images/5/5a/ZeroSuitSamusHeadSSBUWebsite.png";}
+
+					if (char2 == "bayonetta") {img2 = "https://www.ssbwiki.com/images/2/27/BayonettaHeadSSBUWebsite.png";}
+					else if (char2 == "bowser") {img2 = "https://www.ssbwiki.com/images/0/0b/BowserHeadSSBUWebsite.png";}
+					else if (char2 == "bowserjr") {img2 = "https://www.ssbwiki.com/images/3/3e/BowserJrHeadSSBUWebsite.png";}
+					else if (char2 == "captainfalcon") {img2 = "https://www.ssbwiki.com/images/6/6b/CaptainFalconHeadSSBUWebsite.png";}
+					else if (char2 == "cloud") {img2 = "https://www.ssbwiki.com/images/c/cb/CloudHeadSSBUWebsite.png";}
+					else if (char2 == "corrin") {img2 = "https://www.ssbwiki.com/images/6/6a/CorrinHeadSSBUWebsite.png";}
+					else if (char2 == "diddykong") {img2 = "https://www.ssbwiki.com/images/5/5d/DiddyKongHeadSSBUWebsite.png";}
+					else if (char2 == "donkeykong") {img2 = "https://www.ssbwiki.com/images/2/21/DonkeyKongHeadSSBUWebsite.png";}
+					else if (char2 == "drmario") {img2 = "https://www.ssbwiki.com/images/c/c8/DrMarioHeadSSBUWebsite.png";}
+					else if (char2 == "duckhunt") {img2 = "https://www.ssbwiki.com/images/3/38/DuckHuntHeadSSBUWebsite.png";}
+					else if (char2 == "falco") {img2 = "https://www.ssbwiki.com/images/6/6e/FalcoHeadSSBUWebsite.png";}
+					else if (char2 == "fox") {img2 = "https://www.ssbwiki.com/images/c/c9/FoxHeadSSBUWebsite.png";}
+					else if (char2 == "ganondorf") {img2 = "https://www.ssbwiki.com/images/b/b6/GanondorfHeadSSBUWebsite.png";}
+					else if (char2 == "greninja") {img2 = "https://www.ssbwiki.com/images/7/79/GreninjaHeadSSBUWebsite.png";}
+					else if (char2 == "iceclimbers") {img2 = "https://www.ssbwiki.com/images/0/0c/IceClimbersHeadSSBUWebsite.png";}
+					else if (char2 == "ike") {img2 = "https://www.ssbwiki.com/images/2/25/IkeHeadSSBUWebsite.png";}
+					else if (char2 == "incineroar") {img2 = "https://www.ssbwiki.com/images/e/e3/IncineroarHeadSSBUWebsite.png";}
+					else if (char2 == "inkling") {img2 = "https://www.ssbwiki.com/images/0/04/InklingHeadSSBUWebsite.png";}
+					else if (char2 == "isabelle") {img2 = "https://www.ssbwiki.com/images/2/2e/IsabelleHeadSSBUWebsite.png";}
+					else if (char2 == "jigglypuff") {img2 = "https://www.ssbwiki.com/images/9/90/JigglypuffHeadSSBUWebsite.png";}
+					else if (char2 == "kingdedede") {img2 = "https://www.ssbwiki.com/images/f/fe/KingDededeHeadSSBUWebsite.png";}
+					else if (char2 == "kingkrool") {img2 = "https://www.ssbwiki.com/images/3/35/KingKRoolHeadSSBUWebsite.png";}
+					else if (char2 == "kirby") {img2 = "https://www.ssbwiki.com/images/1/15/KirbyHeadSSBUWebsite.png";}
+					else if (char2 == "link") {img2 = "https://www.ssbwiki.com/images/2/2b/LinkHeadSSBUWebsite.png";}
+					else if (char2 == "littlemac") {img2 = "https://www.ssbwiki.com/images/8/87/LittleMacHeadSSBUWebsite.png";}
+					else if (char2 == "lucario") {img2 = "https://www.ssbwiki.com/images/2/20/LucarioHeadSSBUWebsite.png";}
+					else if (char2 == "lucas") {img2 = "https://www.ssbwiki.com/images/3/31/LucasHeadSSBUWebsite.png";}
+					else if (char2 == "luigi") {img2 = "https://www.ssbwiki.com/images/9/9d/LuigiHeadSSBUWebsite.png";}
+					else if (char2 == "mario") {img2 = "https://www.ssbwiki.com/images/9/9e/MarioHeadSSBUWebsite.png";}
+					else if (char2 == "marth") {img2 = "https://www.ssbwiki.com/images/a/ae/MarthHeadSSBUWebsite.png";}
+					else if (char2 == "megaman") {img2 = "https://www.ssbwiki.com/images/2/26/MegaManHeadSSBUWebsite.png";}
+					else if (char2 == "metaknight") {img2 = "https://www.ssbwiki.com/images/3/3d/MetaKnightHeadSSBUWebsite.png";}
+					else if (char2 == "mewtwo") {img2 = "https://www.ssbwiki.com/images/7/7e/MewtwoHeadSSBUWebsite.png";}
+					else if (char2 == "miibrawler") {img2 = "https://www.ssbwiki.com/images/d/d8/MiiBrawlerHeadSSBU.png";}
+					else if (char2 == "miigunner") {img2 = "https://www.ssbwiki.com/images/3/3d/MiiGunnerHeadSSBU.png";}
+					else if (char2 == "miiswordfighter") {img2 = "https://www.ssbwiki.com/images/e/ef/MiiSwordfighterHeadSSBU.png";}
+					else if (char2 == "mrgameandwatch") {img2 = "https://www.ssbwiki.com/images/1/15/MrGame%26WatchHeadSSBUWebsite.png";}
+					else if (char2 == "ness") {img2 = "https://www.ssbwiki.com/images/d/d5/NessHeadSSBUWebsite.png";}
+					else if (char2 == "olimar") {img2 = "https://www.ssbwiki.com/images/9/97/OlimarHeadSSBUWebsite.png";}
+					else if (char2 == "pacman") {img2 = "https://www.ssbwiki.com/images/3/3d/Pac-ManHeadSSBUWebsite.png";}
+					else if (char2 == "palutena") {img2 = "https://www.ssbwiki.com/images/d/d7/PalutenaHeadSSBUWebsite.png";}
+					else if (char2 == "peach") {img2 = "https://www.ssbwiki.com/images/1/14/PeachHeadSSBUWebsite.png";}
+					else if (char2 == "pichu") {img2 = "https://www.ssbwiki.com/images/5/50/PichuHeadSSBUWebsite.png";}
+					else if (char2 == "pikachu") {img2 = "https://www.ssbwiki.com/images/5/52/PikachuHeadSSBUWebsite.png";}
+					else if (char2 == "piranhaplant") {img2 = "https://www.ssbwiki.com/images/c/cf/PiranhaPlantHeadSSBUWebsite.png";}
+					else if (char2 == "pit") {img2 = "https://www.ssbwiki.com/images/d/d7/PitHeadSSBUWebsite.png";}
+					else if (char2 == "pokemontrainer") {img2 = "https://www.ssbwiki.com/images/2/2c/Pok%C3%A9monTrainerHeadSSBUWebsite.png";}
+					else if (char2 == "ridley") {img2 = "https://www.ssbwiki.com/images/7/7c/RidleyHeadSSBUWebsite.png";}
+					else if (char2 == "rob") {img2 = "https://www.ssbwiki.com/images/b/be/ROBHeadSSBUWebsite.png";}
+					else if (char2 == "robin") {img2 = "https://www.ssbwiki.com/images/4/43/RobinHeadSSBUWebsite.png";}
+					else if (char2 == "rosalina") {img2 = "https://www.ssbwiki.com/images/6/63/RosalinaHeadSSBUWebsite.png";}
+					else if (char2 == "roy") {img2 = "https://www.ssbwiki.com/images/2/22/RoyHeadSSBUWebsite.png";}
+					else if (char2 == "ryu") {img2 = "https://www.ssbwiki.com/images/2/20/RyuHeadSSBUWebsite.png";}
+					else if (char2 == "samus") {img2 = "https://www.ssbwiki.com/images/d/d0/SamusHeadSSBUWebsite.png";}
+					else if (char2 == "sheik") {img2 = "https://www.ssbwiki.com/images/1/1e/SheikHeadSSBUWebsite.png";}
+					else if (char2 == "shulk") {img2 = "https://www.ssbwiki.com/images/b/bf/ShulkHeadSSBUWebsite.png";}
+					else if (char2 == "simon") {img2 = "https://www.ssbwiki.com/images/5/52/SimonHeadSSBUWebsite.png";}
+					else if (char2 == "snake") {img2 = "https://www.ssbwiki.com/images/9/9f/SnakeHeadSSBUWebsite.png";}
+					else if (char2 == "sonic") {img2 = "https://www.ssbwiki.com/images/b/b7/SonicHeadSSBUWebsite.png";}
+					else if (char2 == "toonlink") {img2 = "https://www.ssbwiki.com/images/b/bf/ToonLinkHeadSSBUWebsite.png";}
+					else if (char2 == "villager") {img2 = "https://www.ssbwiki.com/images/f/f9/VillagerHeadSSBUWebsite.png";}
+					else if (char2 == "wario") {img2 = "https://www.ssbwiki.com/images/7/7f/WarioHeadSSBUWebsite.png";}
+					else if (char2 == "wiifittrainer") {img2 = "https://www.ssbwiki.com/images/f/fc/WiiFitTrainerHeadSSBUWebsite.png";}
+					else if (char2 == "wolf") {img2 = "https://www.ssbwiki.com/images/0/06/WolfHeadSSBUWebsite.png";}
+					else if (char2 == "yoshi") {img2 = "https://www.ssbwiki.com/images/9/93/YoshiHeadSSBUWebsite.png";}
+					else if (char2 == "younglink") {img2 = "https://www.ssbwiki.com/images/c/c0/YoungLinkHeadSSBUWebsite.png";}
+					else if (char2 == "zelda") {img2 = "https://www.ssbwiki.com/images/c/c8/ZeldaHeadSSBUWebsite.png";}
+					else if (char2 == "zerosuit") {img2 = "https://www.ssbwiki.com/images/5/5a/ZeroSuitSamusHeadSSBUWebsite.png";}
+					
+					if (char3 == "bayonetta") {img3 = "https://www.ssbwiki.com/images/2/27/BayonettaHeadSSBUWebsite.png";}
+					else if (char3 == "bowser") {img3 = "https://www.ssbwiki.com/images/0/0b/BowserHeadSSBUWebsite.png";}
+					else if (char3 == "bowserjr") {img3 = "https://www.ssbwiki.com/images/3/3e/BowserJrHeadSSBUWebsite.png";}
+					else if (char3 == "captainfalcon") {img3 = "https://www.ssbwiki.com/images/6/6b/CaptainFalconHeadSSBUWebsite.png";}
+					else if (char3 == "cloud") {img3 = "https://www.ssbwiki.com/images/c/cb/CloudHeadSSBUWebsite.png";}
+					else if (char3 == "corrin") {img3 = "https://www.ssbwiki.com/images/6/6a/CorrinHeadSSBUWebsite.png";}
+					else if (char3 == "diddykong") {img3 = "https://www.ssbwiki.com/images/5/5d/DiddyKongHeadSSBUWebsite.png";}
+					else if (char3 == "donkeykong") {img3 = "https://www.ssbwiki.com/images/2/21/DonkeyKongHeadSSBUWebsite.png";}
+					else if (char3 == "drmario") {img3 = "https://www.ssbwiki.com/images/c/c8/DrMarioHeadSSBUWebsite.png";}
+					else if (char3 == "duckhunt") {img3 = "https://www.ssbwiki.com/images/3/38/DuckHuntHeadSSBUWebsite.png";}
+					else if (char3 == "falco") {img3 = "https://www.ssbwiki.com/images/6/6e/FalcoHeadSSBUWebsite.png";}
+					else if (char3 == "fox") {img3 = "https://www.ssbwiki.com/images/c/c9/FoxHeadSSBUWebsite.png";}
+					else if (char3 == "ganondorf") {img3 = "https://www.ssbwiki.com/images/b/b6/GanondorfHeadSSBUWebsite.png";}
+					else if (char3 == "greninja") {img3 = "https://www.ssbwiki.com/images/7/79/GreninjaHeadSSBUWebsite.png";}
+					else if (char3 == "iceclimbers") {img3 = "https://www.ssbwiki.com/images/0/0c/IceClimbersHeadSSBUWebsite.png";}
+					else if (char3 == "ike") {img3 = "https://www.ssbwiki.com/images/2/25/IkeHeadSSBUWebsite.png";}
+					else if (char3 == "incineroar") {img3 = "https://www.ssbwiki.com/images/e/e3/IncineroarHeadSSBUWebsite.png";}
+					else if (char3 == "inkling") {img3 = "https://www.ssbwiki.com/images/0/04/InklingHeadSSBUWebsite.png";}
+					else if (char3 == "isabelle") {img3 = "https://www.ssbwiki.com/images/2/2e/IsabelleHeadSSBUWebsite.png";}
+					else if (char3 == "jigglypuff") {img3 = "https://www.ssbwiki.com/images/9/90/JigglypuffHeadSSBUWebsite.png";}
+					else if (char3 == "kingdedede") {img3 = "https://www.ssbwiki.com/images/f/fe/KingDededeHeadSSBUWebsite.png";}
+					else if (char3 == "kingkrool") {img3 = "https://www.ssbwiki.com/images/3/35/KingKRoolHeadSSBUWebsite.png";}
+					else if (char3 == "kirby") {img3 = "https://www.ssbwiki.com/images/1/15/KirbyHeadSSBUWebsite.png";}
+					else if (char3 == "link") {img3 = "https://www.ssbwiki.com/images/2/2b/LinkHeadSSBUWebsite.png";}
+					else if (char3 == "littlemac") {img3 = "https://www.ssbwiki.com/images/8/87/LittleMacHeadSSBUWebsite.png";}
+					else if (char3 == "lucario") {img3 = "https://www.ssbwiki.com/images/2/20/LucarioHeadSSBUWebsite.png";}
+					else if (char3 == "lucas") {img3 = "https://www.ssbwiki.com/images/3/31/LucasHeadSSBUWebsite.png";}
+					else if (char3 == "luigi") {img3 = "https://www.ssbwiki.com/images/9/9d/LuigiHeadSSBUWebsite.png";}
+					else if (char3 == "mario") {img3 = "https://www.ssbwiki.com/images/9/9e/MarioHeadSSBUWebsite.png";}
+					else if (char3 == "marth") {img3 = "https://www.ssbwiki.com/images/a/ae/MarthHeadSSBUWebsite.png";}
+					else if (char3 == "megaman") {img3 = "https://www.ssbwiki.com/images/2/26/MegaManHeadSSBUWebsite.png";}
+					else if (char3 == "metaknight") {img3 = "https://www.ssbwiki.com/images/3/3d/MetaKnightHeadSSBUWebsite.png";}
+					else if (char3 == "mewtwo") {img3 = "https://www.ssbwiki.com/images/7/7e/MewtwoHeadSSBUWebsite.png";}
+					else if (char3 == "miibrawler") {img3 = "https://www.ssbwiki.com/images/d/d8/MiiBrawlerHeadSSBU.png";}
+					else if (char3 == "miigunner") {img3 = "https://www.ssbwiki.com/images/3/3d/MiiGunnerHeadSSBU.png";}
+					else if (char3 == "miiswordfighter") {img3 = "https://www.ssbwiki.com/images/e/ef/MiiSwordfighterHeadSSBU.png";}
+					else if (char3 == "mrgameandwatch") {img3 = "https://www.ssbwiki.com/images/1/15/MrGame%26WatchHeadSSBUWebsite.png";}
+					else if (char3 == "ness") {img3 = "https://www.ssbwiki.com/images/d/d5/NessHeadSSBUWebsite.png";}
+					else if (char3 == "olimar") {img3 = "https://www.ssbwiki.com/images/9/97/OlimarHeadSSBUWebsite.png";}
+					else if (char3 == "pacman") {img3 = "https://www.ssbwiki.com/images/3/3d/Pac-ManHeadSSBUWebsite.png";}
+					else if (char3 == "palutena") {img3 = "https://www.ssbwiki.com/images/d/d7/PalutenaHeadSSBUWebsite.png";}
+					else if (char3 == "peach") {img3 = "https://www.ssbwiki.com/images/1/14/PeachHeadSSBUWebsite.png";}
+					else if (char3 == "pichu") {img3 = "https://www.ssbwiki.com/images/5/50/PichuHeadSSBUWebsite.png";}
+					else if (char3 == "pikachu") {img3 = "https://www.ssbwiki.com/images/5/52/PikachuHeadSSBUWebsite.png";}
+					else if (char3 == "piranhaplant") {img3 = "https://www.ssbwiki.com/images/c/cf/PiranhaPlantHeadSSBUWebsite.png";}
+					else if (char3 == "pit") {img3 = "https://www.ssbwiki.com/images/d/d7/PitHeadSSBUWebsite.png";}
+					else if (char3 == "pokemontrainer") {img3 = "https://www.ssbwiki.com/images/2/2c/Pok%C3%A9monTrainerHeadSSBUWebsite.png";}
+					else if (char3 == "ridley") {img3 = "https://www.ssbwiki.com/images/7/7c/RidleyHeadSSBUWebsite.png";}
+					else if (char3 == "rob") {img3 = "https://www.ssbwiki.com/images/b/be/ROBHeadSSBUWebsite.png";}
+					else if (char3 == "robin") {img3 = "https://www.ssbwiki.com/images/4/43/RobinHeadSSBUWebsite.png";}
+					else if (char3 == "rosalina") {img3 = "https://www.ssbwiki.com/images/6/63/RosalinaHeadSSBUWebsite.png";}
+					else if (char3 == "roy") {img3 = "https://www.ssbwiki.com/images/2/22/RoyHeadSSBUWebsite.png";}
+					else if (char3 == "ryu") {img3 = "https://www.ssbwiki.com/images/2/20/RyuHeadSSBUWebsite.png";}
+					else if (char3 == "samus") {img3 = "https://www.ssbwiki.com/images/d/d0/SamusHeadSSBUWebsite.png";}
+					else if (char3 == "sheik") {img3 = "https://www.ssbwiki.com/images/1/1e/SheikHeadSSBUWebsite.png";}
+					else if (char3 == "shulk") {img3 = "https://www.ssbwiki.com/images/b/bf/ShulkHeadSSBUWebsite.png";}
+					else if (char3 == "simon") {img3 = "https://www.ssbwiki.com/images/5/52/SimonHeadSSBUWebsite.png";}
+					else if (char3 == "snake") {img3 = "https://www.ssbwiki.com/images/9/9f/SnakeHeadSSBUWebsite.png";}
+					else if (char3 == "sonic") {img3 = "https://www.ssbwiki.com/images/b/b7/SonicHeadSSBUWebsite.png";}
+					else if (char3 == "toonlink") {img3 = "https://www.ssbwiki.com/images/b/bf/ToonLinkHeadSSBUWebsite.png";}
+					else if (char3 == "villager") {img3 = "https://www.ssbwiki.com/images/f/f9/VillagerHeadSSBUWebsite.png";}
+					else if (char3 == "wario") {img3 = "https://www.ssbwiki.com/images/7/7f/WarioHeadSSBUWebsite.png";}
+					else if (char3 == "wiifittrainer") {img3 = "https://www.ssbwiki.com/images/f/fc/WiiFitTrainerHeadSSBUWebsite.png";}
+					else if (char3 == "wolf") {img3 = "https://www.ssbwiki.com/images/0/06/WolfHeadSSBUWebsite.png";}
+					else if (char3 == "yoshi") {img3 = "https://www.ssbwiki.com/images/9/93/YoshiHeadSSBUWebsite.png";}
+					else if (char3 == "younglink") {img3 = "https://www.ssbwiki.com/images/c/c0/YoungLinkHeadSSBUWebsite.png";}
+					else if (char3 == "zelda") {img3 = "https://www.ssbwiki.com/images/c/c8/ZeldaHeadSSBUWebsite.png";}
+					else if (char3 == "zerosuit") {img3 = "https://www.ssbwiki.com/images/5/5a/ZeroSuitSamusHeadSSBUWebsite.png";}
+					else {img3 = "https://vignette.wikia.nocookie.net/universe-of-smash-bros-lawl/images/4/48/SSB4_random_icon.png/revision/latest?cb=20160401164505";}
+					
+					var pic1 = document.createElement("img");
+					var pic2 = document.createElement("img");
+					var pic3 = document.createElement("img");
+					
+					pic1.src = img1;
+					pic2.src = img2;
+					pic3.src = img3;
+					
+					pic1.setAttribute("class", "image");
+					pic2.setAttribute("class", "image");
+					pic3.setAttribute("class", "image");
+					
+					str1 = "updateCard('" + char1 + "')";
+					str2 = "updateCard('" + char2 + "')";
+					str3 = "updateCard('" + char3 + "')";
+					
+					pic1.setAttribute("onclick", str1);
+					pic2.setAttribute("onclick", str2);
+					pic3.setAttribute("onclick", str3);
+
+					document.getElementById("small").appendChild(pic1);
+					document.getElementById("small").appendChild(pic2);
+					document.getElementById("small").appendChild(pic3);
+					
+					var elem = document.getElementById("getResult");
+					elem.parentNode.removeChild(elem);
+					
+					updateCard(char1)
+				}
+				
+				function updateCard(character) {
+					var elem = document.getElementById("card");
+					elem.parentNode.removeChild(elem);
+					
+					var img = ""
+					if (character == 'mario') {img = "https://i.imgur.com/L04FWoG.png";}
+					else if (character =='donkeykong') {img = "https://i.imgur.com/gcYy47V.png";}
+					else if (character =='link') {img = "https://i.imgur.com/cxTfmRQ.png";}
+					else if (character =='samus') {img = "https://i.imgur.com/jCVvsQJ.png";}
+					else if (character =='yoshi') {img = "https://i.imgur.com/5bsWywK.png";}
+					else if (character =='kirby') {img = "https://i.imgur.com/AdM9XNv.png";}
+					else if (character =='fox') {img = "https://i.imgur.com/SW2aWG2.png";}
+					else if (character =='pikachu') {img = "https://i.imgur.com/EWnkhjz.png";}
+					else if (character =='luigi') {img = "https://i.imgur.com/QnX5rtY.png";}
+					else if (character =='ness') {img = "https://i.imgur.com/1LdAnR9.png";}
+					else if (character =='captainfalcon') {img = "https://i.imgur.com/D17PpH3.png";}
+					else if (character =='jigglypuff') {img = "https://i.imgur.com/ju4Im5x.png";}
+					else if (character =='peach') {img = "https://i.imgur.com/pwC1hw4.png";}
+					else if (character =='bowser') {img = "https://i.imgur.com/7hWUliE.png";}
+					else if (character =='iceclimbers') {img = "https://i.imgur.com/euMTVBc.png";}
+					else if (character =='sheik') {img = "https://i.imgur.com/hFjnAFr.png";}
+					else if (character =='zelda') {img = "https://i.imgur.com/3c4pCnR.png";}
+					else if (character =='drmario') {img = "https://i.imgur.com/iGi5OdE.png";}
+					else if (character =='pichu') {img = "https://i.imgur.com/BRgzAHq.png";}
+					else if (character =='falco') {img = "https://i.imgur.com/BPauvQ6.png";}
+					else if (character =='marth') {img = "https://i.imgur.com/5CZ56cc.png";}
+					else if (character =='younglink') {img = "https://i.imgur.com/1OkmLxg.png";}
+					else if (character =='ganondorf') {img = "https://i.imgur.com/ONDBNXS.png";}
+					else if (character =='mewtwo') {img = "https://i.imgur.com/YSOXv5L.png";}
+					else if (character =='roy') {img = "https://i.imgur.com/o4tVSSs.png";}
+					else if (character =='mrgameandwatch') {img = "https://i.imgur.com/AXw933a.png";}
+					else if (character =='metaknight') {img = "https://i.imgur.com/LPOF0XA.png";}
+					else if (character =='pit') {img = "https://i.imgur.com/BdUprx0.png";}
+					else if (character =='zerosuit') {img = "https://i.imgur.com/qUL4aXW.png";}
+					else if (character =='wario') {img = "https://i.imgur.com/jWqdp1G.png";}
+					else if (character =='snake') {img = "https://i.imgur.com/t7Gszj7.png";}
+					else if (character =='ike') {img = "https://i.imgur.com/UuO98Y8.png";}
+					else if (character =='pokemontrainer') {img = "https://i.imgur.com/axVHHY7.png";}
+					else if (character =='diddykong') {img = "https://i.imgur.com/3jhVxRz.png";}
+					else if (character =='lucas') {img = "https://i.imgur.com/77S1Wus.png";}
+					else if (character =='sonic') {img = "https://i.imgur.com/pn0wUfd.png";}
+					else if (character =='kingdedede') {img = "https://i.imgur.com/CrRkBbx.png";}
+					else if (character =='olimar') {img = "https://i.imgur.com/7Rc2L0c.png";}
+					else if (character =='lucario') {img = "https://i.imgur.com/0HFr2BW.png";}
+					else if (character =='rob') {img = "https://i.imgur.com/mpYnJQB.png";}
+					else if (character =='toonlink') {img = "https://i.imgur.com/sAFoRyy.png";}
+					else if (character =='wolf') {img = "https://i.imgur.com/HXiUHIA.png";}
+					else if (character =='villager') {img = "https://i.imgur.com/xcrYahL.png";}
+					else if (character =='megaman') {img = "https://i.imgur.com/FeqyOH9.png";}
+					else if (character =='wiifittrainer') {img = "https://i.imgur.com/Wek9U4D.png";}
+					else if (character =='rosalina') {img = "https://i.imgur.com/jSWmETz.png";}
+					else if (character =='littlemac') {img = "https://i.imgur.com/OP0Dgog.png";}
+					else if (character =='greninja') {img = "https://i.imgur.com/nVLkaX0.png";}
+					else if (character =='miibrawler') {img = "https://i.imgur.com/mjmk5OG.png";}
+					else if (character =='miiswordfighter') {img = "https://i.imgur.com/mjmk5OG.png";}
+					else if (character =='miigunner') {img = "https://i.imgur.com/mjmk5OG.png";}
+					else if (character =='palutena') {img = "https://i.imgur.com/Vza02o7.png";}
+					else if (character =='pacman') {img = "https://i.imgur.com/jHICgSu.png";}
+					else if (character =='robin') {img = "https://i.imgur.com/G93YvSy.png";}
+					else if (character =='shulk') {img = "https://i.imgur.com/n7jX2NC.png";}
+					else if (character =='bowserjr') {img = "https://i.imgur.com/DsS2uB4.png";}
+					else if (character =='duckhunt') {img = "https://i.imgur.com/rUVlOEX.png";}
+					else if (character =='ryu') {img = "https://i.imgur.com/Ds6ORM8.png";}
+					else if (character =='cloud') {img = "https://i.imgur.com/1IOUfZC.png";}
+					else if (character =='corrin') {img = "https://i.imgur.com/65Ix5iE.png";}
+					else if (character =='bayonetta') {img = "https://i.imgur.com/4OngVOL.png";}
+					else if (character =='inkling') {img = "https://i.imgur.com/UEMHOiv.png";}
+					else if (character =='ridley') {img = "https://i.imgur.com/pzt8y54.png";}
+					else if (character =='simon') {img = "https://i.imgur.com/9pETrPc.png";}
+					else if (character =='kingkrool') {img = "https://i.imgur.com/728ico3.png";}
+					else if (character =='isabelle') {img = "https://i.imgur.com/7xY4vFF.png";}
+					else if (character =='incineroar') {img = "https://i.imgur.com/bKs2RKo.png";}
+					else if (character =='piranhaplant') {img = "https://i.imgur.com/b1eeiGp.png";}
+					
+					var pic = document.createElement("img");
+					pic.setAttribute("class", "card");
+					pic.src = img;
+					pic.setAttribute("id","card");
+					document.getElementById("full").appendChild(pic);
+				}
+				
+			</script>
+			<style>
+				body {
+					background-image: url(https://www.cabinetmakerwarehouse.com/wp-content/uploads/9242-gull-grey.jpg), url(https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_SuperSmashBrosUltimate_02_image1600w.jpg);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: auto, cover;
+					background-attachment: fixed, fixed;
+				}
+				
+				h1 {
+					padding-top: 64px;
+					font: small-caps bold 64px/1 sans-serif;
+					color: white;
+				}	
+				
+				p {
+					font: small-caps bold 32px/1 sans-serif;
+					color: white;
+				}
+				
+				.button {
+					background-color: rgb(54, 54, 54);
+					color: white;
+					text-align: center;
+					text-decoration: none;
+					display: inline-block;
+					margin: 10px 2px;
+					cursor: pointer;
+					border: 6px solid white;
+					font: small-caps bold 64px/1 sans-serif;
+					width: 512px;
+					height: 128px;
+					border-radius: 10px;
+					-webkit-transition-duration: 0.4s;
+					transition-duration: 0.4s;
+					position: fixed;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+
+				.button:hover {
+					background-color: white;
+					color: rgb(54, 54, 54)
+				}
+				
+				.image {
+					height: 192;
+					width: 192;
+					margin: 10px 40px;
+					cursor: pointer;
+				}
+				
+				.card {
+					height: 600;
+					width: 1000;
+					margin: 40px 40px;
+				}
+				
+			</style>
+		</head>
+		<body>
+			
+			<button type="button" class="button" title="" id='getResult' onclick="getResult()">Get Results</button>
+			
+			
+			<p><div id="full"><img src="" id="card"> </div></p>
+			<p><div id="small"> </div></p>
+		</body>
+	</center>
+</html>
+
