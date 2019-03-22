@@ -11,9 +11,9 @@ app.listen(8000, function() {
 // Connecting to sql database with help of the mysql library 
 var con = mysql.createConnection({
 	host: 'localhost',
-	user: 'root',
-	password: 'password',
-	database: 'smash_tags' //Enter database name here
+	user: 'Carter',
+	password: '2040Carter',
+	database: 'smashtags' //Enter database name here
 });
 
 // Connecting to mysql database and error checking
@@ -158,7 +158,13 @@ app.get("/restOfQuiz.html", function(req, res) {
 });
 
 app.get("/smash", function(req, res) {
-	con.query('SELECT * FROM fullroster WHERE playstyle = "' + req.query.question + '"', function(err, rows, fields) { // Run the query to get data
+	var sqlCmd = "SELECT * FROM fullroster WHERE playstyle IN ("
+	for (var i = 0; i < req.query.question.length; i++){
+		sqlCmd += "\"" + req.query.question[i] + "\",";
+	};
+	sqlCmd = sqlCmd.slice(0, -1);
+	sqlCmd +=");";
+	con.query(sqlCmd, function(err, rows, fields) { // Run the query to get data
 		if (err) {
 			console.log('Error during query processing.');
 			console.log(err);
