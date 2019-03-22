@@ -13,30 +13,33 @@
 		}
 
 		h1 {
-			color: red;
-			font: small-caps bold 96px/1 sans-serif;
 			padding-top: 64px;
-			text-shadow: 4px 6px black;
-
-		}
+			font: small-caps bold 96px/1 sans-serif;
+			color: white;
+			border-color: black;
+			text-shadow: -2px 3px black;
+		}	
 
 		.button {
-			background-color: blue;
-  			border: none;
+			background-color: rgb(54, 54, 54);
 			color: white;
-			padding: 25px 48px;
 			text-align: center;
 			text-decoration: none;
 			display: inline-block;
-			font-size: 40px;
-			margin: 4px 2px;
+			margin: 64px 64px;
 			cursor: pointer;
-			border: 1px solid black;
+			border: 3px solid white;
+			font: small-caps bold 60px/1 sans-serif;
+			width: 512px;
+			height: 128px;
 			border-radius: 10px;
+			webkit-transition-duration: 0.4s;
+			transition-duration: 0.4s;
 		}
 
 		.button:hover {
-			color: red;
+			background-color: white;
+			color: rgb(54, 54, 54)
 		}
 	</style>
 
@@ -85,9 +88,9 @@
 <body>
 	<h1>Which Smash Bros Character Are You?</h1>
 	
-		<button type="button" class="button" onclick="startQuiz()">Start Quiz!</button>
+		<button type="button" class="button" onclick="startQuiz()">Start Quiz</button>
 	
-		<button type="button" class="button" onclick="showAlgorithm()"> Show Algorithm!</button>
+		<button type="button" class="button" onclick="showAlgorithm()"> Show Algorithm</button>
 </body>
 </center>
 </html>
