@@ -13,3 +13,9 @@ Techonologies Used:
 -jQuery
 
 How To Run: Run index.js on either node or nodemon. Go to localhost:8000 to access the local server. 
+
+Developers:
+- Hoang Nguyen (Back-End)
+- Chris Butler (Front-End)
+- Blake Parker (Project Manager)
+- Carter Knight (Database)
