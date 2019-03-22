@@ -76,6 +76,7 @@ app.get("/resultsPage.html", function(req, res) {
 // Endpoint to get table data from sql database
 var characterInfo;
 var answers;
+var finalResults;
 
 function findResults(char, ans) {
 	var characters = {};
@@ -162,6 +163,8 @@ function findResults(char, ans) {
 
 	console.log(results);
 	console.log(characters);
+
+	return results;
 }
 
 app.get("/smash", function(req, res) {
@@ -178,5 +181,9 @@ app.get("/smash", function(req, res) {
 
 app.get("/answers", function(req, res) {
 	answers = req.query;
-	findResults(characterInfo, answers);
+	finalResults = findResults(characterInfo, answers);
+});
+
+app.get("/finalresults", function(req, res) {
+	res.send(finalResults);
 });
