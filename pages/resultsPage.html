@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+
+	<style>
+		.button {
+			background-color: blue;
+  			border: none;
+			color: white;
+			padding: 25px 48px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 40px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border: 1px solid black;
+			border-radius: 10px;
+		}
+
+		.button:hover {
+			color: red;
+		}
+	</style>
+
+	<script text="text/javascript">
+		$.ajax({ 
+			type: "GET",
+			url: "/finalResults",
+			success: function(msg) {
+				console.log("Request Sent.");
+				$('#empty').append(msg);
+			},
+			error:  function() { 
+				console.log("Failure.");
+			}
+		});
+
+
+		function backHome(){
+			$.ajax({ 
+			url: "/index",
+			type: 'GET',
+			success: function(data) {
+				window.location.href = data;
+			},
+			error:  function() { 
+				console.log("Failure.");
+			}
+		});
+		}
+	</script>
+
+</head>
+
+<body>
+	<div id="empty">
+	</div>
+
+	<div>
+		<button type="button" class="button" onclick="backHome()">Back to Start</button>
+	</div>
+</body>
+
+</html>

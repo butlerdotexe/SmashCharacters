@@ -178,6 +178,7 @@
 						dataType: "json",
 						success: function(msg) {
 							console.log("Request Sent.");
+							$('#empty').append(msg);
 						},
 						error:  function() { 
 							console.log("Failure.");
@@ -196,7 +197,6 @@
 							console.log("Failure.");
 						}
 					});
-					
 					
 				}
 				
@@ -330,6 +330,8 @@
 			<p><button type="button" class="button" title="" onclick="submit()">Submit</button></p>
 			<div id="test"></div>
 
+			<div id="empty">
+			</div>
 		</body>
 	</center>
 </html>

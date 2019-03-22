@@ -182,8 +182,10 @@ app.get("/smash", function(req, res) {
 app.get("/answers", function(req, res) {
 	answers = req.query;
 	finalResults = findResults(characterInfo, answers);
+	//res.send(finalResults); //added
 });
 
-app.get("/finalresults", function(req, res) {
+app.get("/finalResults", function(req, res) {
+	console.log("Yeet\n");
 	res.send(finalResults);
 });
