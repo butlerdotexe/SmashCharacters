@@ -12,7 +12,7 @@ app.listen(8000, function() {
 var con = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
-	password: 'Archmere8*0',
+	password: 'password',
 	database: 'smash_tags' //Enter database name here
 });
 
@@ -99,7 +99,7 @@ function findResults(char, ans) {
 	}
 
 	// Find out the results and store them in results array
-	while (results.length < 3 && highestNum > 0) {
+	while (results.length < 3 && highestNum >= 0) {
 		for (var num in characters) {
 			if (results.length < 3) {
 
