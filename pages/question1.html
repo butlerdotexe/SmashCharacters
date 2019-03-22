@@ -4,17 +4,28 @@
 			<title>Smash Bros Character Quiz</title>
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 			<script>
+				var json = '{"question":['
+			
+			
 				function q1(answer) {
 					test = document.getElementById("test");
 					test.innerHTML = answer;
+					document.getElementById(answer).style.background="red";
+					json += '"' + answer.toString() + '",';
 					
-					var json = '{"question":"' + answer.toString() + '"}';
-					obj = JSON.parse(json);
 					
 					test.innerHTML = json;
-
 					
-					$.ajax({ 
+				}
+				
+				function submit() {
+				
+				var newStr = json.substring(0, json.length-1);
+				newStr += ']}';
+				test.innerHTML = newStr;
+				obj = JSON.parse(newStr);
+				
+				$.ajax({ 
 						type: "GET",
 						url: "/smash",
 						data: obj,
@@ -26,8 +37,8 @@
 							console.log("Failure.");
 						}
 					});
-
-					var URL = "http://localhost:8000/restOfQuiz";
+				
+				var URL = "http://localhost:8000/restOfQuiz";
 
 					// Send to next page
 					$.ajax({ 
@@ -40,8 +51,9 @@
 							console.log("Failure.");
 						}
 					});
-					
+				
 				}
+				
 			</script>
 			<style>
 				body {
@@ -94,48 +106,50 @@
 			<p>Choose the playstyle that you would prefer</p>
 			<p>Hover over an option to see a description</p>
 			<p>
-				<button type="button" class="button" title="The generalists. They have no stand-out weaknesses, but they also lack 
+				<button type="button" class="button" id="All-Rounder" title="The generalists. They have no stand-out weaknesses, but they also lack 
 stand-out strengths. Good for beginners or those who like a simple playstyle." onclick="q1('All-Rounder')">All-Rounder</button>
 
-				<button type="button" class="button" title="These characters look for openings and exploit them, either with
+				<button type="button" class="button" id="Bait & Punish" title="These characters look for openings and exploit them, either with
 a ridiculously strong hit or with a difficult to escape combo." onclick="q1('Bait & Punish')">Bait & Punish</button>
 
-				<button type="button" class="button" title="Characters that change in the middle of the game in some way. 
+				<button type="button" class="button" id="Dynamic" title="Characters that change in the middle of the game in some way. 
 There are only 2 of these characters, Shulk and Pokemon Trainer." onclick="q1('Dynamic')">Dynamic</button>
 			</p>
 			
 			<p>
-				<button type="button" class="button" title="Characters that rely on strong ground game, typically 
+				<button type="button" class="button" id="Footsies" title="Characters that rely on strong ground game, typically 
 relying on incredible power over combos."onclick="q1('Footsies')">Footsies</button>
 
-				<button type="button" class="button" title="These characters really like grabbing, and can typically do a lot once they get their 
+				<button type="button" class="button" id="Half-Grappler" title="These characters really like grabbing, and can typically do a lot once they get their 
 hands on their opponent. You might have trouble actually getting that far, though." onclick="q1('Half-Grappler')">Half-Grappler</button>
 
-				<button type="button" class="button" title="Characters with the speed to get in, get a few hits, and get out before they 
+				<button type="button" class="button" id="Hit & Run" title="Characters with the speed to get in, get a few hits, and get out before they 
 get in trouble. Can usually keep a safe distance from their opponents." onclick="q1('Hit & Run')">Hit & Run</button>
 			</p>
 			
 			<p>
-				<button type="button" class="button" title="These characters have a pretty versatile moveset, and work 
+				<button type="button" class="button" id="Mix-Up" title="These characters have a pretty versatile moveset, and work 
 best switching between aggression and baiting opponents." onclick="q1('Mix-Up')">Mix-Up</button>
 				
-				<button type="button" class="button" title="Characters that like to apply pressure right up close, using 
+				<button type="button" class="button" id="Rushdown" title="Characters that like to apply pressure right up close, using 
 fast moves to put their opponent in a bad position."onclick="q1('Rushdown')">Rushdown</button>
 				
-				<button type="button" class="button" title="Characters that like to 'trap' their opponents with projectiles, 
+				<button type="button" class="button" id="Trapper" title="Characters that like to 'trap' their opponents with projectiles, 
 limiting their movement and making it hard to approach." onclick="q1('Trapper')">Trapper</button>
 			</p>
 			
 			<p>
-				<button type="button" class="button" title="Very defensive characters with long-range tools, keeping their 
+				<button type="button" class="button" id="Turtle" title="Very defensive characters with long-range tools, keeping their 
 opponents away from them until it's time to get the kill." onclick="q1('Turtle')">Turtle</button>
 				
-				<button type="button" class="button" title="Characters that can play multiple different playstyles that 
+				<button type="button" class="button" id="Zone Breaker" title="Characters that can play multiple different playstyles that 
 have relatively safe ways to approach their opponent." onclick="q1('Zone Breaker')">Zone Breaker</button>
 				
-				<button type="button" class="button" title="Characters that like to apply pressure from a set distance, keeping 
+				<button type="button" class="button" id="Zoner" title="Characters that like to apply pressure from a set distance, keeping 
 control of their opponent's space and limiting their options." onclick="q1('Zoner')">Zoner</button>
 			</p>
+			
+			<p><button type="button" class="button" onclick="submit()">Submit</button></p>
 			
 			<div id="test"></div>
 		</body>
