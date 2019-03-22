@@ -186,9 +186,11 @@ app.get("/resultsPage.html", function(req, res) {
 
 
 app.get("/finalResults", function(req, res) {
-	var sendBack ={};
-
-	for (var i = 0; i < finalResults.length; i++)
-		sendBack += (i+1) + ". " + finalResults[i] + "<br>";
+	var sendBack = { 
+		'char1': finalResults[0],
+		'char2': finalResults[1],
+		'char3': finalResults[2]
+	}
+	console.log(sendBack);
 	res.send(sendBack);
 });
