@@ -165,13 +165,10 @@
 						//console.log(answers[i]);
 					}
 					
-					console.log(answers);
-					
 					
 					var json = '{"difficulty":"' + answers[0].toString() + '","charRange":"' + answers[1].toString() + '","projectile":"' + answers[2].toString() + '","runSpeed":"' + answers[3].toString() + '","airSpeed":"' + answers[4].toString() + '","recovery":"' + answers[5].toString() + '","size":"' + answers[6].toString() + '","weight":"' + answers[7].toString() + '","combo":"' + answers[8].toString() + '","Gimmick":"' + answers[9].toString() +'"}';
+
 					obj = JSON.parse(json);
-					
-					console.log(json);
 
 					
 					$.ajax({ 
@@ -180,10 +177,10 @@
 						data: obj,
 						dataType: "json",
 						success: function(msg) {
-							console.log("request sent");
+							console.log("Request Sent.");
 						},
 						error:  function() { 
-							console.log("Failure");
+							console.log("Failure.");
 						}
 					});
 
@@ -196,7 +193,7 @@
 							window.location.href = data;
 						},
 						error:  function() { 
-							console.log("Failure");
+							console.log("Failure.");
 						}
 					});
 					

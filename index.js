@@ -73,13 +73,96 @@ app.get("/resultsPage.html", function(req, res) {
 	res.sendFile(path.join(__dirname, "pages/resultsPage.html"));
 });
 
-// Still need to work on this
-app.get("/answers", function(req, res) {
-	console.log(req.query);
-});
-
 // Endpoint to get table data from sql database
-var characters;
+var characterInfo;
+var answers;
+
+function findResults(char, ans) {
+	var characters = {};
+	var charArray = [];
+
+	// Put list of characters into character dictionary with 0 value
+	for (var number in char) {
+		characters[char[number].name] = 0;
+		charArray.push(char[number].name);
+	}
+
+	// Add 1 to each character in characters if their traits matches the user's answers
+	for (var character in characters) {
+		for (var column in char) {
+			if (character == char[column].name) {
+				if (char[column].difficulty == answers.difficulty) {
+					characters[character] += 1;
+				}
+
+				if (char[column].charRange == answers.charRange) {
+					characters[character] += 1;
+				}
+
+				if (char[column].projectile == answers.projectile) {
+					characters[character] += 1;
+				}
+
+				if (char[column].runSpeed == answers.runSpeed) {
+					characters[character] += 1;
+				}
+
+				if (char[column].airSpeed == answers.airSpeed) {
+					characters[character] += 1;
+				}
+
+				if (char[column].recovery == answers.recovery) {
+					characters[character] += 1;
+				}
+
+				if (char[column].size == answers.size) {
+					characters[character] += 1;
+				}
+
+				if (char[column].weight == answers.weight) {
+					characters[character] += 1;
+				}
+
+				if (char[column].combo == answers.combo) {
+					characters[character] += 1;
+				}
+
+				if (char[column].Gimmick == answers.Gimmick) {
+					characters[character] += 1;
+				}
+			}
+		}
+	}
+
+	var results = [];
+	var highestNum = 0;
+
+	// Set highest number
+	for (var num in characters) {
+		if (characters[num] > highestNum) {
+			highestNum = characters[num];
+		}
+	}
+
+	// Find out the results and store them in results array
+	while (results.length < 3 && highestNum > 0) {
+		for (var num in characters) {
+			if (results.length < 3) {
+
+				if (characters[num] == highestNum) {
+					results.push(num);
+				} 
+
+				if (charArray[charArray.length - 1] == num) {
+					highestNum -= 1;
+				}
+			}
+		}
+	}
+
+	console.log(results);
+	console.log(characters);
+}
 
 app.get("/smash", function(req, res) {
 	con.query('SELECT * FROM fullroster WHERE playstyle = "' + req.query.question + '"', function(err, rows, fields) { // Run the query to get data
@@ -87,18 +170,13 @@ app.get("/smash", function(req, res) {
 			console.log('Error during query processing.');
 			console.log(err);
 		} else { // Success case
-			characters = rows;
+			characterInfo = rows;
+			console.log(characterInfo);
 		}
 	});
 });
 
 app.get("/answers", function(req, res) {
-	con.query('SELECT * FROM fullroster', function(err, rows, fields) { // Run the query to get data
-		if (err) {
-			console.log('Error during query processing.');
-			console.log(err);
-		} else { // Success case
-			
-		}
-	});
+	answers = req.query;
+	findResults(characterInfo, answers);
 });
