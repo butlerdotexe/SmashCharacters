@@ -178,6 +178,7 @@
 						dataType: "json",
 						success: function(msg) {
 							console.log("Request Sent.");
+							$('#empty').append(msg);
 						},
 						error:  function() { 
 							console.log("Failure.");
@@ -197,7 +198,6 @@
 						}
 					});
 					
-					
 				}
 				
 
@@ -215,11 +215,13 @@
 					padding-top: 64px;
 					font: small-caps bold 48px/1 sans-serif;
 					color: white;
+					text-shadow: -1px 2px black;
 				}	
 				
 				p {
-					font: small-caps bold 32px/1 sans-serif;
+					font: small-caps bold 36px/1 sans-serif;
 					color: white;
+					text-shadow: -1px 2px black;
 				}
 				
 				.button {
@@ -328,6 +330,8 @@
 			<p><button type="button" class="button" title="" onclick="submit()">Submit</button></p>
 			<div id="test"></div>
 
+			<div id="empty">
+			</div>
 		</body>
 	</center>
 </html>

@@ -12,7 +12,7 @@ app.listen(8000, function() {
 var con = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
-	password: 'password',
+	password: 'Archmere8*0',
 	database: 'smash_tags' //Enter database name here
 });
 
@@ -24,53 +24,6 @@ con.connect(function(err) {
 	} else {
 		console.log("Database successfully connected.");
 	}
-});
-
-// Router set to main index page
-app.get("/index", function(req, res) {
-	res.send("http://localhost:8000/");
-});
-
-app.get("/", function(req, res) {
-	res.sendFile(path.join(__dirname, "pages/index.html"));
-});
-
-//Link for index to algorithm page
-app.get("/algorithm", function(req, res) {
-	res.send("http://localhost:8000/algorithm.html");
-});
-
-app.get("/algorithm.html", function(req, res) {
-	res.sendFile(path.join(__dirname, "pages/algorithm.html"));
-});
-
-
-// Link for index to beginning of quiz
-app.get("/question1", function(req, res) {
-	res.send("http://localhost:8000/question1.html");
-});
-
-app.get("/question1.html", function(req, res) {
-	res.sendFile(path.join(__dirname, "pages/question1.html"));
-});
-
-
-// Link for question 1 to rest of quiz
-app.get("/restOfQuiz", function(req, res) {
-	res.send("http://localhost:8000/restOfQuiz.html");
-});
-
-app.get("/restOfQuiz.html", function(req, res) {
-	res.sendFile(path.join(__dirname, "pages/restOfQuiz.html"));
-});
-
-// Link for rest of quiz to results
-app.get("/results", function(req, res) {
-	res.send("http://localhost:8000/resultsPage.html");
-});
-
-app.get("/resultsPage.html", function(req, res) {
-	res.sendFile(path.join(__dirname, "pages/resultsPage.html"));
 });
 
 // Endpoint to get table data from sql database
@@ -167,6 +120,43 @@ function findResults(char, ans) {
 	return results;
 }
 
+
+// Router set to main index page
+app.get("/index", function(req, res) {
+	res.send("http://localhost:8000/");
+});
+
+app.get("/", function(req, res) {
+	res.sendFile(path.join(__dirname, "pages/index.html"));
+});
+
+//Link for index to algorithm page
+app.get("/algorithm", function(req, res) {
+	res.send("http://localhost:8000/algorithm.html");
+});
+
+app.get("/algorithm.html", function(req, res) {
+	res.sendFile(path.join(__dirname, "pages/algorithm.html"));
+});
+
+// Link for index to beginning of quiz
+app.get("/question1", function(req, res) {
+	res.send("http://localhost:8000/question1.html");
+});
+
+app.get("/question1.html", function(req, res) {
+	res.sendFile(path.join(__dirname, "pages/question1.html"));
+});
+
+// Link for question 1 to rest of quiz
+app.get("/restOfQuiz", function(req, res) {
+	res.send("http://localhost:8000/restOfQuiz.html");
+});
+
+app.get("/restOfQuiz.html", function(req, res) {
+	res.sendFile(path.join(__dirname, "pages/restOfQuiz.html"));
+});
+
 app.get("/smash", function(req, res) {
 	con.query('SELECT * FROM fullroster WHERE playstyle = "' + req.query.question + '"', function(err, rows, fields) { // Run the query to get data
 		if (err) {
@@ -182,8 +172,23 @@ app.get("/smash", function(req, res) {
 app.get("/answers", function(req, res) {
 	answers = req.query;
 	finalResults = findResults(characterInfo, answers);
+	//res.send(finalResults); //added
 });
 
-app.get("/finalresults", function(req, res) {
-	res.send(finalResults);
+// Link for rest of quiz to results
+app.get("/results", function(req, res) {
+	res.send("http://localhost:8000/resultsPage.html");
+});
+
+app.get("/resultsPage.html", function(req, res) {
+	res.sendFile(path.join(__dirname, "pages/resultsPage.html"));
+});
+
+
+app.get("/finalResults", function(req, res) {
+	var sendBack ={};
+
+	for (var i = 0; i < finalResults.length; i++)
+		sendBack += (i+1) + ". " + finalResults[i] + "<br>";
+	res.send(sendBack);
 });
